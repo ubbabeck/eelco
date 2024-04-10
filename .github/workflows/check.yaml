@@ -18,8 +18,9 @@ jobs:
       - name: install Nix
         uses: cachix/install-nix-action@v23
       - name: test
-        run: nix-shell --run cargo test
-
+        run: |
+          nix develop 
+          cargo test
   clippy:
     runs-on: ubuntu-latest
     steps:
