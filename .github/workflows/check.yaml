@@ -16,7 +16,7 @@ jobs:
         with:
           command: cache
       - name: install Nix
-        uses: cachix/install-nix-action@v23
+        uses: cachix/install-nix-action@v26
       - name: test
         run: |
           nix develop 
